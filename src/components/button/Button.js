@@ -1,23 +1,26 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { buttonActive } from "../../store/actions/actions";
 import "./Button.css";
 
 export const Button = () => {
-  const [state, setState] = useState(false);
+  const button = useSelector((state) => state.button);
+  const dispatch = useDispatch();
 
-  const onClickHandler = () => {
-    setState(!state);
+  const onClickButton = () => {
+    dispatch(buttonActive());
   };
 
   return (
     <>
       <button
         style={
-          state ? { backgroundColor: "green" } : { backgroundColor: "red" }
+          button ? { backgroundColor: "green" } : { backgroundColor: "red" }
         }
         className="button"
-        onClick={onClickHandler}
+        onClick={onClickButton}
       >
-        {state ? "ON" : "OFF"}
+        {button ? "ON" : "OFF"}
       </button>
     </>
   );

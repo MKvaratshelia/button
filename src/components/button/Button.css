@@ -2,7 +2,7 @@
   width: 150px;
   height: 150px;
   border: none;
-  border-radius: 10px;
+  border-radius: 50%;
   margin: 0;
   padding: 0;
   font-size: 32px;
@@ -11,7 +11,7 @@
   cursor: pointer;
   box-shadow: 0 0 0 60px rgba(0, 0, 0, 0) inset, 0.1em 0.1em 0.2em #800;
   outline: none;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 .button:active {
   box-shadow: 0 0 0 60px rgba(0, 0, 0, 0.05) inset;

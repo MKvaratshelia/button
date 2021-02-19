@@ -1,2 +1,1 @@
-export const ON = "ON";
-export const OFF = "OFF";
+export const GET_BUTTON_STATE = "BUTTON_STATE";
