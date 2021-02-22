@@ -9,7 +9,7 @@
   color: #fff;
   box-sizing: border-box;
   cursor: pointer;
-  box-shadow: 0 0 0 60px rgba(0, 0, 0, 0) inset, 0.1em 0.1em 0.2em #800;
+  box-shadow: 0 0 0 60px rgba(0, 0, 0, 0) inset, 0.1em 0.1em 0.2em #000;
   outline: none;
   transition: all 0.3s;
 }
