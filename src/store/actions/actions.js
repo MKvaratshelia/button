@@ -1,9 +1,21 @@
-import { GET_BUTTON_STATE } from "../types/types";
+import { GET_BUTTON_STATE, BUTTON_OFF, BUTTON_ON } from "../types/types";
 import axios from "axios";
 
 export const getButtonState = (button) => {
   return {
     type: GET_BUTTON_STATE,
+    payload: button,
+  };
+};
+export const setButtonOn = (button) => {
+  return {
+    type: BUTTON_ON,
+    payload: button,
+  };
+};
+export const setButtonOff = (button) => {
+  return {
+    type: BUTTON_OFF,
     payload: button,
   };
 };
@@ -29,7 +41,7 @@ export const buttonOn = () => {
         { button: true }
       );
       const data = await response.data.button;
-      dispatch(getButtonState(data));
+      dispatch(setButtonOn(data));
     } catch (e) {
       console.log(e);
     }
@@ -43,7 +55,7 @@ export const buttonOff = () => {
         { button: false }
       );
       const data = await response.data.button;
-      dispatch(getButtonState(data));
+      dispatch(setButtonOff(data));
     } catch (e) {
       console.log(e);
     }
